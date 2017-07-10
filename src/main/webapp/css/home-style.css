@@ -1,0 +1,333 @@
+@CHARSET "ISO-8859-1";
+body {
+    font-family: "Muli", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*--------------Stile per la barra di caricamento circular--------*/
+#loading-bar{
+	position: absolute;
+    top: 50%;
+    left: 47%;
+    margin: auto;
+}
+md-progress-circular.md-default-theme path, md-progress-circular path {
+	stroke:#FF8F00;
+}
+
+#header{
+	width: 100%;
+	height: 80px;
+	background: #009688;
+}
+
+#header > *{
+	display: inline-block;
+}
+
+
+
+/*--------------Stile per il menu laterale (sidenav)--------------*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #009688;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #E0E0E0;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav p {
+    padding-left: 5px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #000000;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #212121;
+    background-color: #B2DFDB;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav .closebtn:hover {
+	color: #212121;
+	background-color: #009688;
+}
+
+#title {
+	font-weight: 310; 
+  	margin-left: 29%;
+  }
+
+/*--------------Stile Responsive--------------*/
+@media screen and (min-width: 450px) and (max-width: 700px){
+	#title {
+  	margin-left: 15%;
+  }
+  
+  #nav-title:after{
+	content: ""
+	}
+	
+}
+
+@media screen and (min-width: 450px){
+	#nav-title:after{
+	content: "Categories"
+	}
+}
+
+/*--------------Stile Responsive Portrait--------------*/
+@media screen and (max-height: 750px) {
+  .sidenav {padding-top: 15px;}
+  
+  .sidenav a {font-size: 18px;}
+  
+  #map {height: 78%; width: 100%;}
+  
+  #header{
+	width: 100%;
+	height: 12%;
+	background: #009688;
+	}
+}
+
+@media screen and (max-width: 400px) {
+  .sidenav {padding-top: 15px;}
+  
+  .sidenav a {font-size: 20px;}
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    padding-right: 15px;
+    font-size: 32px;
+    margin-left: 50px;
+    margin-bottom: 25px;
+	}
+  
+  #map {
+  	height: 400px; 
+  	width: 100%;
+	}
+	
+	
+	#title {
+  	margin-left: 24%;
+  }
+
+ .mdDialog {
+ 	   height:	auto !important;
+       max-height:	100% !important;
+       max-width: 	100%;
+       position: absolute;
+       top: 5%;
+       left: 13%;
+       /*border-radius: 2;*/
+   }
+
+  #loading-bar {
+	position: absolute;
+    margin: auto;
+	}
+}
+
+/*--------------Stile per la mappa--------------*/
+#map {
+	height: 555px;
+	width: 100%;
+}
+
+/*--------------Stile per la barra di ricerca--------------*/
+#search_bar {
+	position: absolute;
+	right: 0px;
+	margin-top: 63px;
+	font-size: 16pt;
+	z-index: 1;
+}
+
+/*--------------Stile per l'Infowindow e il suo contenuto--------------*/
+.gm-style-iw {
+	max-width: 320px !important;
+	min-height: 140px !important;
+	top: 15px !important;
+	left: 0px !important;
+	right: 20px !important;
+	background-color: #B2DFDB; /*PrimaryLight*/
+	box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+	border: 1px solid rgba(72, 181, 233, 0.6);
+	border-radius: 2px 2px 10px 10px;
+}
+#iw-container {
+	width: 320px;
+	margin-bottom: 10px;
+}
+#iw-container .iw-title {
+	max-width: 320px !important;
+	font-family: "Muli", sans-serif;
+	font-size: 22px;
+	font-weight: 400;
+	padding: 10px;
+	background-color: #00796B; /*Primary*/
+	color: #E0E0E0;	/*SecondaryText*/
+	margin: 0;
+	border-radius: 2px 2px 0 0;
+}
+#iw-container .iw-content {
+	max-width: 320px !important;
+	font-size: 15px;
+	font-family: "Lato", sans-serif;
+	line-height: 18px;
+	font-weight: 400;
+	margin-right: 1px;
+	padding: 15px 5px 20px 15px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: #B2DFDB;
+}
+
+/*--------------Stile per il bottone--------------*/
+.btn {
+  position: relative;
+  display: block;
+  /*margin: 20px auto;*/
+  padding: 0;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  background-color: #FF6D00; /*Accent*/
+  font-size: 15px;
+  color: #E0E0E0; /*SecondaryText*/
+  transition: background-color .5s;
+}
+
+.btn:hover, .btn:focus {
+  background-color: #d35400;
+}
+
+.btn > * {
+  position: relative;
+}
+
+.btn span {
+	font-family: "Lato", sans-serif;
+  	display: block;
+  	padding: 12px 24px;
+}
+
+.btn:before {
+  content: "";  
+  position: absolute;
+  top: 50%;
+  left: 50%;  
+  display: block;
+  width: 0;
+  padding-top: 0;
+  border-radius: 90%;
+  background-color: rgba(236, 240, 241, .3);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+/*----Stile per il form-----*/
+md-dialog {
+	height: auto;
+	}
+
+/* Underline */
+
+.bar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.bar:before, .bar:after {
+	content: '';
+	height: 2px; 
+	width: 0;
+	bottom: 1px; 
+	position: absolute;
+	background: #FF8F00; 
+	-webkit-transition:all 0.2s ease; 
+	transition: all 0.2s ease;
+}
+
+.bar:before { left: 50%; }
+
+.bar:after { right: 50%; }
+
+
+/* active */
+
+input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
+
+
+/* Highlight */
+
+.highlight {
+	position: absolute;
+	height: 60%; 
+	width: 100px; 
+	top: 25%; 
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+
+/* active */
+
+input:focus ~ .highlight {
+	-webkit-animation: inputHighlighter 0.3s ease;
+	animation: inputHighlighter 0.3s ease;
+}
+
+
+/* Animations */
+@-webkit-keyframes inputHighlighter {
+	from { background: #4a89dc; }
+	to 	{ width: 0; background: transparent; }
+}
+
+@keyframes inputHighlighter {
+	from { background: #4a89dc; }
+	to 	{ width: 0; background: transparent; }
+}
+
